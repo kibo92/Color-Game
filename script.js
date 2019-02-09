@@ -1,4 +1,3 @@
-// console.log("Connected JS");
 var colors = generateRandomColors(6);
 
 var squares = document.querySelectorAll(".square");
@@ -7,7 +6,7 @@ var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.getElementById("message");
 var h1 = document.querySelector("h1");
 
-
+//Change span h1 rgb to picked color 
 colorDisplay.textContent = pickedColor;
 
 for (var i = 0; i < squares.length; i++) {
@@ -19,14 +18,13 @@ for (var i = 0; i < squares.length; i++) {
         //Grab color of clicked square
         var clickedColor = this.style.backgroundColor;
         //compare color to pickedColor
-        // console.log(clickedColor, pickedColor);
         if(clickedColor === pickedColor) {
-            // alert("Correct!");
+
             messageDisplay.textContent = "Correct!";
             changeColors(clickedColor);
             h1.style.backgroundColor = clickedColor;
         } else {
-            // alert("Wrong!");
+            
             this.style.backgroundColor = "#232323"
             messageDisplay.textContent = "Try again.";
         }
